@@ -197,7 +197,9 @@ export default {
         start_date: this.start_date ? moment(this.start_date).format('YYYY-MM-DD') : '',
         end_date: this.end_date ? moment(this.end_date).format('YYYY-MM-DD') : '',
       };
+      this.$store.commit('SET_IS_LOADING', true);
       const response = await api('getServicePayment', payload);
+      this.$store.commit('SET_IS_LOADING', false);
       if (response.data.error_code === 0) {
         this.responseData = response.data.data;
       } else {

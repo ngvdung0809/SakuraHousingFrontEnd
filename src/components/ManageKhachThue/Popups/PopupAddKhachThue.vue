@@ -4,7 +4,7 @@
       <div class="justify-content-between">
         <b-row>
           <b-col class="d-flex">
-            <label for="fullName" class="align-items-center w-50"><span class="text-color-red">*</span> Tên chủ nhà:</label>
+            <label for="fullName" class="align-items-center w-50"><span class="text-color-red">*</span> Tên khách thuê:</label>
             <b-form-input 
               placeholder="" id="fullName"
               v-model="$v.data.name.$model"
@@ -12,7 +12,7 @@
               aria-describedby="input-name-feedback"
             ></b-form-input>
             <b-form-invalid-feedback class="ml-3" id="input-name-feedback" v-if="!$v.data.name.required" >
-              Vui lòng nhập tên chủ nhà
+              Vui lòng nhập tên khách thuê
             </b-form-invalid-feedback>
           </b-col>
           <b-col class="d-flex">

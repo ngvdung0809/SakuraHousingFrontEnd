@@ -903,7 +903,7 @@ export default {
         if (response.data.error_code === 0) {
           this.makeToastMessage('Thành công', 'success');
         } else {
-          this.makeToastMessage('Thất bại', 'success');
+          this.makeToastMessage('Thất bại', 'danger');
         }
       }
       if (this.currentStep === 3 && this.isBrokerageContract && !this.isServiceContract) {
@@ -935,7 +935,7 @@ export default {
         if (response.data.error_code === 0) {
           this.makeToastMessage('Thành công', 'success');
         } else {
-          this.makeToastMessage('Thất bại', 'success');
+          this.makeToastMessage('Thất bại', 'danger');
         }
       }
       if (this.currentStep === 3 && !this.isBrokerageContract && this.isServiceContract) {
@@ -975,7 +975,7 @@ export default {
         if (response.data.error_code === 0) {
           this.makeToastMessage('Thành công', 'success');
         } else {
-          this.makeToastMessage('Thất bại', 'success');
+          this.makeToastMessage('Thất bại', 'danger');
         }
       }
       if (this.currentStep === 4 && this.isBrokerageContract && this.isServiceContract) {
@@ -1019,7 +1019,7 @@ export default {
         if (response.data.error_code === 0) {
           this.makeToastMessage('Thành công', 'success');
         } else {
-          this.makeToastMessage('Thất bại', 'success');
+          this.makeToastMessage('Thất bại', 'danger');
         }
       }
       if (this.currentStep === this.filterStateStep.length) {

@@ -184,7 +184,9 @@ export default {
         start_date: this.start_date ? moment(this.start_date).format('YYYY-MM-DD') : '',
         end_date: this.end_date ? moment(this.end_date).format('YYYY-MM-DD') : '',
       };
+      this.$store.commit('SET_IS_LOADING', true);
       const response = await api('getPayment', payload);
+      this.$store.commit('SET_IS_LOADING', false);
       if (response.data.error_code === 0) {
         this.responseData = response.data.data;
       } else {
@@ -196,7 +198,9 @@ export default {
         id,
         type_email: 2
       }
+      this.$store.commit('SET_IS_LOADING', true);
       const response = await api('sendEmailPayment', payload);
+      this.$store.commit('SET_IS_LOADING', false);
       if (response.data.error_code === 0) {
         this.makeToastMessage('Gửi email thành công', 'success');
       }
